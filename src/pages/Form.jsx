@@ -1,10 +1,11 @@
 import { React, useState } from "react";
-import { FaCheckCircle } from "react-icons/fa";
 import { VscClose } from "react-icons/vsc";
 import { AiFillExclamationCircle } from "react-icons/ai";
 import { RiCheckboxCircleFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export default function Form() {
+  const [successMsg, setSuccess] = useState(false);
   const FormDiv = () => {
     const [isDisable, setDisable] = useState(true);
     const [formData, setFormData] = useState({
@@ -101,13 +102,23 @@ export default function Form() {
       <>
         <div className="w-1/2 mx-auto flex justify-center mt-8">
           <div className="text-center ">
-            <RiCheckboxCircleFill className="mx-auto my-3 mb-10" size="4em" color="#28B246" />
+            <RiCheckboxCircleFill
+              className="mx-auto my-3 mb-10"
+              size="4em"
+              color="#28B246"
+            />
             <div>
               <span className="text-[#2DA950] text-3xl covered mt-8">
                 Success Submitted
               </span>
-              <p className="manrope text-5xl font-semibold my-3">Congratulations</p>
-              <p className="manrope text-xl px-36 mt-4 text-[#727272]">Your request has been successfully submitted to us. We will validate your information and reach out to your shortly with updates</p>
+              <p className="manrope text-5xl font-semibold my-3">
+                Congratulations
+              </p>
+              <p className="manrope text-xl px-36 mt-4 text-[#727272]">
+                Your request has been successfully submitted to us. We will
+                validate your information and reach out to your shortly with
+                updates
+              </p>
             </div>
           </div>
         </div>
@@ -133,13 +144,15 @@ export default function Form() {
           </svg>
         </div>
         <div>
-          <VscClose
-            size="2.3em"
-            className="border rounded-full border-[#CACACA] p-1"
-          />
+          <Link to="/">
+            <VscClose
+              size="2.3em"
+              className="border rounded-full border-[#CACACA] p-1"
+            />
+          </Link>
         </div>
       </div>
-      <Success />
+      {successMsg ? <Success /> : <Form />}
     </>
   );
 }

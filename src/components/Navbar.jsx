@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className="my-4 bg-white flex justify-between items-center h-24 mx-4 px-4 pr-1 border rounded-full top-4">
@@ -18,8 +18,8 @@ const Navbar = () => {
         </svg>
       </div>
       <div className="justify-around mx-4">
-        <button class="rounded-full border px-5 py-5 mx-4 hover:bg-[#EAEAEA] transition-colors	">
-          Get Projects
+        <button class="rounded-full border px-5 py-5 mx-4 hover:bg-[#EAEAEA] transition-colors">
+          <Link to="/form">Get Projects</Link>
         </button>
         <button class="rounded-full border px-5 py-5 mx-1 bg-black text-white hover:bg-[#4E4E4E] transition-colors">
           Onboard Talent
