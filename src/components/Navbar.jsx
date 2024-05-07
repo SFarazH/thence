@@ -18,8 +18,10 @@ const Navbar = () => {
         </svg>
       </div>
       <div className="justify-around mx-4">
-        <button class="rounded-full border px-5 py-5 mx-4">Get Projects</button>
-        <button class="rounded-full border px-5 py-5 mx-1 bg-black text-white">
+        <button class="rounded-full border px-5 py-5 mx-4 hover:bg-[#EAEAEA] transition-colors	">
+          Get Projects
+        </button>
+        <button class="rounded-full border px-5 py-5 mx-1 bg-black text-white hover:bg-[#4E4E4E] transition-colors">
           Onboard Talent
         </button>
       </div>

@@ -1,16 +1,15 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import Questions from "./components/Questions";
+import Form from "./pages/Form";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <HeroSection/>
-      <Questions/>
-      <Footer/>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/form" element={<Form />}></Route>
+      </Routes>
     </>
   );
 }

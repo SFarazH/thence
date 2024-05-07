@@ -41,7 +41,7 @@ export default function Questions() {
 
   return (
     <>
-      <div className="container-fluid mx-4 ques rounded-3xl py-8 mb-12">
+      <div className="container-fluid mx-4 ques rounded-3xl py-8 mb-12 mt-4" >
         <div className="flex">
           <div className="w-1/2">
             <div className="quesTxt w-fit ml-8">
