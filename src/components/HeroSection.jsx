@@ -19,7 +19,7 @@ export default function HeroSection() {
   ];
   return (
     <>
-      <div className="main mx-4 my-16 mb-24 ">
+      <div className="main mx-4 my-16 mb-40">
         <div className="head text-center ">
           <p className="text-red text-4xl">Success stories</p>
           <span className="text-5xl">

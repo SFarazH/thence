@@ -14,7 +14,7 @@ export default function Questions() {
     };
 
     return (
-      <div className="overflow-hidden mx-4 border-b border-[#D7D7D7] my-5 pb-2 manrope">
+      <div className="overflow-hidden mx-4 border-b border-[#D7D7D7] my-5 pb-3 manrope">
         <button
           className="flex justify-between py-2 w-full text-black  items-center"
           onClick={toggleAccordionItem}
@@ -45,14 +45,15 @@ export default function Questions() {
 
   return (
     <>
-      <div className="container-fluid mx-4 ques rounded-3xl pt-8 mb-12 mt-4">
+      <div className="mx-4 ques rounded-3xl pt-8 mt-24 mb-12">
         <div className="flex">
           <div className="w-1/2">
-            <div className="quesTxt w-fit ml-8 mb-8">
+            <div className="quesTxt w-fit ml-8 mb-8 pl-8">
               <p className="text-2xl mb-2">What’s on your mind</p>
               <span className="text-5xl">Ask Questions</span>
             </div>
-            <img src={img} width="400px" className="bottom-0" />
+
+            <img src={img} width="400px" className="bottom-0 rounded-b-full" />
           </div>
           <div className="w-1/2 mt-8">
             {questions.map((ques) => (
