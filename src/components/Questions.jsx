@@ -6,7 +6,7 @@ import img from "../assets/arrow.png";
 import gImg from "../assets/img.png";
 
 export default function Questions() {
-  const AccordionItem = ({ accordionItem }) => {
+  const AccordionItem = ({ accordionItem, index }) => {
     const [isItemOpen, setIsItemOpen] = useState(false);
     const bodyRef = useRef();
     const toggleAccordionItem = () => {
@@ -14,7 +14,11 @@ export default function Questions() {
     };
 
     return (
-      <div className="overflow-hidden mx-4 border-b border-[#D7D7D7] my-5 pb-3 manrope">
+      <div
+        className={`overflow-hidden mx-4 ${
+          index == 4 ? "" : "border-b"
+        } border-[#D7D7D7] my-5 pb-3 manrope`}
+      >
         <button
           className="flex justify-between py-2 w-full text-black  items-center"
           onClick={toggleAccordionItem}
@@ -45,20 +49,25 @@ export default function Questions() {
 
   return (
     <>
-      <div className="mx-4 ques rounded-3xl pt-8 mt-24 mb-12">
+      <div className="mx-4 bg-[#e8eee7] rounded-3xl pt-8 mt-24 mb-12">
         <div className="flex">
           <div className="w-1/2">
             <div className="quesTxt w-fit ml-8 mb-8 pl-8">
-              <p className="text-2xl mb-2">What’s on your mind</p>
-              <span className="text-5xl">Ask Questions</span>
+              <p className="text-2xl mb-2 font-normal covered text-[#9e9d9d]">
+                What’s on your mind
+              </p>
+              <span className="text-5xl font-semibold manrope">
+                Ask Questions
+              </span>
             </div>
 
-            <img src={img} width="400px" className="bottom-0 rounded-b-full" />
+            <img src={img} width="400px" className="bottom-0 rounded-bl-3xl" />
           </div>
           <div className="w-1/2 mt-8">
-            {questions.map((ques) => (
-              <AccordionItem accordionItem={ques} />
-            ))}
+            {questions.map((ques, index) => {
+              console.log(index);
+              return <AccordionItem index={index} accordionItem={ques} />;
+            })}
           </div>
         </div>
       </div>

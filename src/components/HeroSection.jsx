@@ -19,10 +19,10 @@ export default function HeroSection() {
   ];
   return (
     <>
-      <div className="main mx-4 my-16 mb-40">
+      <div className="overflow-hidden mx-4 my-16 mb-40">
         <div className="head text-center ">
-          <p className="text-red text-4xl">Success stories</p>
-          <span className="text-5xl">
+          <p className="text-4xl text-[#2da950] font-normal covered">Success stories</p>
+          <span className="text-5xl manrope font-extrabold">
             Every success journey <br /> we’ve encountered.
           </span>
         </div>
@@ -111,8 +111,8 @@ export default function HeroSection() {
           </div>
           <div className="absolute pl-[800px]">
             <div className="flex relative ">
-              <div className="border-2 h-[200px] w-[200px] border-[#e8e8e880] rounded-r-3xl	rounded-b-3xl	rounded-tl-[60px]	absolute ml-[250px]"></div>
-              <div className="border-2 h-[200px] w-[200px] border-[#e8e8e880] rounded-r-3xl	rounded-b-3xl	rounded-tl-[60px]	absolute ml-[449px]"></div>
+              <div className="border-2 h-[200px] w-[200px] border-[#e8e8e880] rounded-r-3xl	rounded-b-3xl	rounded-tl-[50px]	absolute ml-[250px]"></div>
+              <div className="border-2 h-[200px] w-[200px] border-[#e8e8e880] rounded-r-3xl	rounded-b-3xl	rounded-tl-[50px]	absolute ml-[449px]"></div>
             </div>
 
             <div className="flex relative mt-[198px]">

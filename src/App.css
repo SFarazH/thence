@@ -4,57 +4,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
-.App {
-  text-align: center;
-}
-
-.head > p {
-  color: #2da950;
-  font-weight: 400;
-  font-family: "Covered By Your Grace", cursive;
-}
-
-.head > span {
-  font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  /* font-size: 56px; */
-}
-
-.ques {
-  background-color: #e8eee7;
-}
-
-.quesTxt > p {
-  font-family: "Covered By Your Grace", cursive;
-  color: #9e9d9d;
-  font-weight: 400;
-}
-
-.quesTxt > span {
-  font-weight: 600;
-  font-family: "Manrope", sans-serif;
-}
-
 .manrope {
   font-family: "Manrope", sans-serif;
 }
 
-.covered{
+.covered {
   font-family: "Covered By Your Grace", cursive;
-}
-
-.submitBtn {
-  background: linear-gradient(97.55deg, #1c1c1c 2.63%, #454444 105.2%),
-    linear-gradient(0deg, #c9c9c9, #c9c9c9);
-}
-
-.main{
-  overflow: hidden;
-}
-
-.text-container {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
