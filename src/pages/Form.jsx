@@ -2,10 +2,11 @@ import { React, useState } from "react";
 import { VscClose } from "react-icons/vsc";
 import { AiFillExclamationCircle } from "react-icons/ai";
 import { RiCheckboxCircleFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Form() {
   const [successMsg, setSuccess] = useState(false);
+  const [redirectTimer, setRedirectTimer] = useState(5);
   const FormDiv = () => {
     const [isDisable, setDisable] = useState(true);
     const [formData, setFormData] = useState({
@@ -13,6 +14,7 @@ export default function Form() {
       email: "",
     });
     const [errorMessage, setErrorMessage] = useState(false);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
       const { name, value } = e.target;
@@ -35,7 +37,21 @@ export default function Form() {
       }
       setErrorMessage(false);
       setSuccess(true);
+      startRedirectTimer();
     };
+
+    const startRedirectTimer = () => {
+      const intervalId = setInterval(() => {
+        setRedirectTimer((prevTimer) => prevTimer - 1);
+      }, 1000);
+
+      setTimeout(() => {
+        clearInterval(intervalId);
+        console.log("okokok");
+        navigate("/");
+      }, 5000);
+    };
+
     return (
       <div className="w-1/2 mx-auto">
         <div className="text text-center mb-6">
@@ -120,6 +136,12 @@ export default function Form() {
                 updates
               </p>
             </div>
+            <p className="mt-40 manrope text-[#727272] font-medium text-[20px]">
+              Redirecting you to Homepage in{" "}
+              <span className="text-black font-bold">
+                {redirectTimer} Seconds
+              </span>
+            </p>
           </div>
         </div>
       </>
