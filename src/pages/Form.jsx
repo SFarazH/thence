@@ -18,12 +18,13 @@ export default function Form() {
 
     const handleChange = (e) => {
       const { name, value } = e.target;
+
       setFormData((prevState) => ({
         ...prevState,
         [name]: value,
       }));
-
-      const allFilled = Object.values(formData).every(
+      const updatedFormData = { ...formData, [name]: value };
+      const allFilled = Object.values(updatedFormData).every(
         (field) => field.trim() !== ""
       );
       setDisable(!allFilled);
@@ -47,7 +48,6 @@ export default function Form() {
 
       setTimeout(() => {
         clearInterval(intervalId);
-        console.log("okokok");
         navigate("/");
       }, 5000);
     };
@@ -165,14 +165,16 @@ export default function Form() {
             />
           </svg>
         </div>
-        <div>
-          <Link to="/">
-            <VscClose
-              size="2.3em"
-              className="border rounded-full border-[#CACACA] p-1"
-            />
-          </Link>
-        </div>
+        {!successMsg && (
+          <div>
+            <Link to="/">
+              <VscClose
+                size="2.3em"
+                className="border rounded-full border-[#CACACA] p-1"
+              />
+            </Link>
+          </div>
+        )}
       </div>
       {successMsg ? <Success /> : <FormDiv />}
     </>
