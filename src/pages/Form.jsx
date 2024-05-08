@@ -68,7 +68,7 @@ export default function Form() {
         >
           <div className="mb-4">
             <input
-              className="appearance-none border rounded-full w-5/12 p-3 text-gray-700 bg-[#EFEFEF] focus:outline-none manrope text-s"
+              className="appearance-none border rounded-full w-5/12 p-4 text-gray-700 bg-[#EFEFEF] focus:outline-none manrope text-s"
               id="name"
               type="text"
               placeholder="Enter your name"
@@ -80,7 +80,7 @@ export default function Form() {
           </div>
           <div className="mb-4">
             <input
-              className={`appearance-none border rounded-full w-5/12 p-3 text-gray-700 ${
+              className={`appearance-none border rounded-full w-5/12 p-4 text-gray-700 ${
                 errorMessage ? "bg-[#F5F8FF] border-[#537FF1]" : "bg-[#EFEFEF]"
               } focus:outline-none manrope text-s`}
               id="email"
@@ -92,7 +92,7 @@ export default function Form() {
               required
             />
             {errorMessage && (
-              <div className="w-5/12 p-3 mx-auto text-left flex">
+              <div className="w-5/12 pt-3 mx-auto text-left flex">
                 <AiFillExclamationCircle color="#FF0808" className="mr-1" />
                 <p className="text-[#FF0808] text-xs ">
                   Enter a valid email address
@@ -102,7 +102,7 @@ export default function Form() {
           </div>
 
           <button
-            className="text-white rounded-full focus:outline-none focus:shadow-outline rounded-full w-5/12 mt-4 p-3 bg-black disabled:bg-[#cacaca] manrope"
+            className="text-white rounded-full focus:outline-none focus:shadow-outline rounded-full w-5/12 mt-4 p-4 bg-black disabled:bg-[#cacaca] manrope"
             type="submit"
             disabled={isDisable}
           >
