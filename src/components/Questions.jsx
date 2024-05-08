@@ -1,10 +1,9 @@
-import { React} from "react";
+import { React } from "react";
 import questions from "../assets/questions.json";
 import img from "../assets/arrow.png";
 import AccordionItem from "./AccordianItem";
 
 export default function Questions() {
-
   return (
     <>
       <div className="mx-4 bg-[#e8eee7] rounded-3xl pt-8 mt-24 mb-12">
@@ -23,8 +22,9 @@ export default function Questions() {
           </div>
           <div className="w-1/2 mt-8">
             {questions.map((ques, index) => {
-              console.log(index);
-              return <AccordionItem index={index} accordionItem={ques} />;
+              return (
+                <AccordionItem key={index} index={index} accordionItem={ques} />
+              );
             })}
           </div>
         </div>
