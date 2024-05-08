@@ -34,7 +34,7 @@ export default function Form() {
         return;
       }
       setErrorMessage(false);
-      console.log(formData);
+      setSuccess(true);
     };
     return (
       <div className="w-1/2 mx-auto">
@@ -152,7 +152,7 @@ export default function Form() {
           </Link>
         </div>
       </div>
-      {successMsg ? <Success /> : <Form />}
+      {successMsg ? <Success /> : <FormDiv />}
     </>
   );
 }

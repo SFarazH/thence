@@ -2,6 +2,8 @@ import { React, useState, useRef } from "react";
 import { TiPlus, TiMinus } from "react-icons/ti";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import questions from "../assets/questions.json";
+import img from "../assets/arrow.png";
+import gImg from "../assets/img.png";
 
 export default function Questions() {
   const AccordionItem = ({ accordionItem }) => {
@@ -17,7 +19,9 @@ export default function Questions() {
           className="flex justify-between py-2 w-full text-black  items-center"
           onClick={toggleAccordionItem}
         >
-          <span className="text-left pr-2 font-semibold text-lg">{accordionItem.question}</span>
+          <span className="text-left pr-2 font-semibold text-lg">
+            {accordionItem.question}
+          </span>
           <span>
             {isItemOpen ? (
               <AiOutlineMinus className="flex align-center ml-4" />
@@ -41,15 +45,16 @@ export default function Questions() {
 
   return (
     <>
-      <div className="container-fluid mx-4 ques rounded-3xl py-8 mb-12 mt-4" >
+      <div className="container-fluid mx-4 ques rounded-3xl pt-8 mb-12 mt-4">
         <div className="flex">
           <div className="w-1/2">
-            <div className="quesTxt w-fit ml-8">
+            <div className="quesTxt w-fit ml-8 mb-8">
               <p className="text-2xl mb-2">What’s on your mind</p>
               <span className="text-5xl">Ask Questions</span>
             </div>
+            <img src={img} width="490px" className="bottom-0" />
           </div>
-          <div className="w-1/2 ">
+          <div className="w-1/2 mt-8">
             {questions.map((ques) => (
               <AccordionItem accordionItem={ques} />
             ))}

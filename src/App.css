@@ -47,3 +47,14 @@
   background: linear-gradient(97.55deg, #1c1c1c 2.63%, #454444 105.2%),
     linear-gradient(0deg, #c9c9c9, #c9c9c9);
 }
+
+.main{
+  overflow: hidden;
+}
+
+.text-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
