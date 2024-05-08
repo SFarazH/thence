@@ -52,7 +52,7 @@ export default function Questions() {
               <p className="text-2xl mb-2">What’s on your mind</p>
               <span className="text-5xl">Ask Questions</span>
             </div>
-            <img src={img} width="490px" className="bottom-0" />
+            <img src={img} width="400px" className="bottom-0" />
           </div>
           <div className="w-1/2 mt-8">
             {questions.map((ques) => (

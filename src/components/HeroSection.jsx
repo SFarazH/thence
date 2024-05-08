@@ -1,7 +1,7 @@
 import React from "react";
-import img from "../assets/img.png";
 import gImg from "../assets/img.png";
 import Carousel from "./Carousel";
+import { IoMdArrowForward } from "react-icons/io";
 
 export default function HeroSection() {
   const demoData = [
@@ -19,7 +19,7 @@ export default function HeroSection() {
   ];
   return (
     <>
-      <div className="main mx-4 my-12 mb-24 ">
+      <div className="main mx-4 my-16 mb-24 ">
         <div className="head text-center ">
           <p className="text-red text-4xl">Success stories</p>
           <span className="text-5xl">
@@ -127,6 +127,8 @@ export default function HeroSection() {
           </div>
           <div className="manrope font-semibold leading-tight ml-[290px] mt-[180px] z-10 ">
             <Carousel carouselImages={demoData} />
+
+            <button className="bg-black rounded-full text-white p-5 flex items-center manrope font-semibold font-[20px] hover:bg-[#4E4E4E] transition-colors">Explore More <IoMdArrowForward size='1.1em' className="ml-3"/> </button>
           </div>
         </div>
       </div>
