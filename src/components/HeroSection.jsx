@@ -6,11 +6,9 @@ import { IoMdArrowForward } from "react-icons/io";
 export default function HeroSection() {
   const demoData = [
     {
-     
       text: "Enhance fortune 50 company’s insights teams research capabilities",
     },
     {
-     
       text: "Enhance fortune 50 company’s insights teams research capabilities",
     },
     {
@@ -21,7 +19,9 @@ export default function HeroSection() {
     <>
       <div className="overflow-hidden mx-4 my-16 mb-40">
         <div className="head text-center ">
-          <p className="text-4xl text-[#2da950] font-normal covered">Success stories</p>
+          <p className="text-4xl text-[#2da950] font-normal covered">
+            Success stories
+          </p>
           <span className="text-5xl manrope font-extrabold">
             Every success journey <br /> we’ve encountered.
           </span>
@@ -72,7 +72,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="bg-[#ffffff] shadow-lg absolute flex px-[18px] py-4 rounded-full mt-[510px] ml-[140px]">
+          <div className="bg-[#ffffff] shadow-lg absolute flex px-[18px] py-4 rounded-full mt-[510px] ml-[140px] hover:scale-125 duration-150 hover:text-red-600">
             <svg
               width="53"
               height="53"
@@ -100,8 +100,8 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className="absolute bg-[#002E18] text-[#ffffff] font-manrope rounded-3xl  p-8 border-[#3D3D3D] border-2 mt-[450px] ml-[530px]">
-            <div className="text-[54px]   font-semibold">
+          <div className="absolute bg-[#002E18] text-[#ffffff] font-manrope rounded-3xl  p-6 border-[#3D3D3D] border-2 mt-[450px] ml-[530px] hover:scale-125 duration-150">
+            <div className="text-[54px] font-semibold">
               $0.5 <span className="text-[20px] text-[#A6A3A0]"> MILLION</span>
             </div>
 
@@ -128,7 +128,9 @@ export default function HeroSection() {
           <div className="manrope font-semibold leading-tight ml-[290px] mt-[180px] z-10 ">
             <Carousel carouselImages={demoData} />
 
-            <button className="bg-black rounded-full text-white p-5 flex items-center manrope font-semibold font-[20px] hover:bg-[#4E4E4E] transition-colors">Explore More <IoMdArrowForward size='1.1em' className="ml-3"/> </button>
+            <button className="bg-black rounded-full text-white p-5 flex items-center manrope font-semibold font-[20px] hover:bg-[#4E4E4E] transition-colors">
+              Explore More <IoMdArrowForward size="1.1em" className="ml-3" />{" "}
+            </button>
           </div>
         </div>
       </div>
